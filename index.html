@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Chatbot</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style src="./style.css"></style>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex items-center justify-center h-screen">
+
+    <!-- Main Chat Container -->
+    <div
+        class="w-full max-w-2xl h-full sm:h-[90vh] sm:max-h-[700px] mx-auto flex flex-col bg-white dark:bg-gray-800 rounded-none sm:rounded-2xl shadow-lg">
+
+        <!-- Header -->
+        <div class="p-4 border-b border-gray-200 dark:border-gray-700">
+            <h1 class="text-xl font-bold text-center">Sentiment Chatbot</h1>
+            <p class="text-xs text-center text-gray-500 dark:text-gray-400">Your AI-powered sentiment analysis assistant
+            </p>
+        </div>
+
+        <!-- Chat Window -->
+        <div id="chat-window" class="flex-1 p-6 overflow-y-auto space-y-4">
+            <!-- Bot Welcome Message -->
+            <div class="flex justify-start">
+                <div class="bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-200 p-3 rounded-lg max-w-md">
+                    <p class="text-sm">Hello! Send me a message, and I'll tell you its sentiment.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="p-4 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+            <div class="flex items-center space-x-3">
+                <input type="text" id="text-input"
+                    class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
+                    placeholder="Type your message...">
+                <button id="send-button"
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold p-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 disabled:bg-blue-400 disabled:cursor-not-allowed">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                        <path
+                            d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
